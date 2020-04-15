@@ -1,0 +1,23 @@
+{
+    "buyer": {
+        "name": "Ali",
+        "surname": "Collins",
+        "email": "dnetix@yopmail.com",
+        "document": "1040035000",
+        "documentType": "CC",
+        "mobile": 3006108300
+    },
+    "payment": {
+        "reference": "TEST_20200306_155611",
+        "description": "Sunt magnam esse neque numquam harum enim aspernatur.",
+        "amount": {
+            "currency": "COP",
+            "total": 122000
+        }
+    },
+    "expiration": "2020-03-07T15:56:11-05:00",
+    "ipAddress": "181.51.75.149",
+    "returnUrl": "https://dnetix.co/p2p/client",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36",
+    "paymentMethod": ""
+}
