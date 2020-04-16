@@ -45,7 +45,7 @@ class JsonController extends Controller
 
            $payment = array(
                         'reference'=>"2106",
-                        'description'=>"producto 1 ",
+                        'description'=>"Producto 1 ",
                         'amount'=> $amount,
                     );
                 $arguments  = json_encode (array(
@@ -54,7 +54,7 @@ class JsonController extends Controller
                                 'payment'=>$payment,
                                 'expiration'=>date('c', strtotime('+1 hour')),
                                 'ipAddress'=>"192.168.1.12",
-                                'returnUrl'=>"http://127.0.0.1:8000/respuesta/$id",
+                                'returnUrl'=>"http://127.0.0.1/prueba_tienda/public",
                                 'userAgent'=> "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36",
                                 'paymentMethod'=> null,
             ));
@@ -73,7 +73,7 @@ class JsonController extends Controller
         return redirect($dir);
     }
 
-    public function respuesta($id){
+    public function answer($id){
         $newOrder =  App\Order::findOrFail($id);
         $RequestId=$newOrder->RequestID;
         if (function_exists('random_bytes')) {
@@ -98,7 +98,7 @@ class JsonController extends Controller
             );
             $arguments  = json_encode(array(
                 'auth' => $auth,));
-           //print ($arguments);
+
             $client = new Client([
                 'headers' => ['Content-Type' => 'application/json']
             ]);
@@ -108,11 +108,11 @@ class JsonController extends Controller
             $response = json_decode($response->getBody()->getContents(), true);
             $status=($response['status']);
             if(($status['status'])=="APPROVED"){
-                $statu="PAYED";
+                $statusUpdate="PAYED";
             }else{
-                $statu=($status['status']);
+                $statusUpdate=($status['status']);
             }
-            $newOrder->status=$statu;
+            $newOrder->status=$statusUpdate;
             $newOrder->save();
             return view('newOrder');
     }

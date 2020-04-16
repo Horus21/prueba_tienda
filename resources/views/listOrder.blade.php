@@ -1,9 +1,18 @@
 @extends('layouts/app')
 
 @section('content')
+
   <div class="container">
            <h2>Lista de Ordenes Registradas </h2>
            <small>En esta seccion se listan todas las ordenes registradas.</small>
+           @if(session('message'))
+             <div class="alert alert-success">
+               {{session('message')}}
+               <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                 <spam aria-hidden="true">&times</spam>
+               </button>
+             </div>
+           @endif
 
     <table class="table table-hover">
         <thead>
@@ -29,10 +38,11 @@
               <td>{{$item->address}}</td>
               <td>{{$item->status}}</td>
               <td>{{$item->created_at}}</td>
+
               <td>
 
                 <form action="{{route('destroy', $item)}}"method="POST">
-                  <a href="{{route('show', $item)}}" ><button type="button" class="btn btn-primary">Ver Orden</button></a>
+                  <a href="{{route('show', $item)}}" ><button type="button" class="btn btn-primary">Resumen Orden</button></a>
                   <a href="{{route('edit', $item)}}"><button type="button" class="btn btn-success">Editar</button></a>
                   @csrf
                   @method('DELETE')

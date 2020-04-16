@@ -30,5 +30,5 @@ Route::put('edit/{id}', 'OrdersController@update')->name('update');
 
 Route::delete('destroy/{id}','OrdersController@destroy')->name('destroy');
 
-Route::get('order/{id}','JsonController@jsonorder')->name('jsorder');
+Route::get('newOrder/{id}','JsonController@jsonorder')->name('jsonorder');
 

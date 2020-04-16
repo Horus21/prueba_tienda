@@ -3,6 +3,14 @@
 
     <div class="card mx-auto shadow" style="width:90%;">
         <div class="card-header">
+             @if(session('message'))
+             <div class="alert alert-success">
+               {{session('message')}}
+               <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                 <spam aria-hidden="true">&times</spam>
+               </button>
+             </div>
+           @endif
         <p class="text-center mb-0">Nueva Orden</p>
         </div>
 
@@ -23,7 +31,7 @@
                     </div>
                     <div class="form-group col-md-3">
                         <label for="email">Correo</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com"value="{{old('email')}}">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="example@email.com" value="{{old('email')}}">
                     </div>
                 </div>
                 <div class="form-row">

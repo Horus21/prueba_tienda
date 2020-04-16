@@ -55,7 +55,7 @@
 
                             <li class="nav-item">
                                 <a href="/" class="{{ Request::path() === '/' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fas fa-home"></i>
+                                    <i class="nav-icon fas fa-shopping-cart"></i>
                                     <p>Nueva Orden</p>
                                 </a>
                             </li>
@@ -63,7 +63,7 @@
                             <li class="nav-item">
                                 <a href="/listOrder"
                                     class="{{ Request::path() === 'usuarios' ? 'nav-link active' : 'nav-link' }}">
-                                    <i class="nav-icon fas fa-users"></i>
+                                    <i class="nav-icon fas fa-list-alt"></i>
                                     <p>
                                         Lista de Ordenes
                                        <!-- <?php use App\User; $users_count = User::all()->count(); ?>

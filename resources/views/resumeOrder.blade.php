@@ -40,7 +40,8 @@
                 </div>
                 </div>
                 @if ($show->status !="PAYED")
-                    <a href="{{route('jsorder',$show->id)}}" id="boton" class="btn btn-primary mb-4 btn-lg">Pagar</a>
+                    <a href="{{route('edit', $show->id)}}" class="btn btn-success mb-4 btn-lg">Editar</a>
+                    <a href="{{route('jsonorder',$show->id)}}"  class="btn btn-primary mb-4 btn-lg">Pagar</a>
                 @endif
         </div>
     </div>
