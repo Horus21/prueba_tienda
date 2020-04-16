@@ -8,6 +8,7 @@ use GuzzleHttp\Client;
 
 class OrdersController extends Controller
 {
+
      public function index(){
 
         return view('newOrder');
