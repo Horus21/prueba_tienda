@@ -3,7 +3,7 @@
 
     <div class="card mx-auto shadow" style="width:90%;">
         <div class="card-header">
-        <p class="text-center mb-0">Nueva Orden</p>
+        <p class="text-center mb-0">Editar Orden</p>
         </div>
 
         <div class="card-body">

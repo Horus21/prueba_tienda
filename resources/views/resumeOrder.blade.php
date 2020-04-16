@@ -14,25 +14,29 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="name">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" value="{{$show->name}}" disabled>
+                        <input type="text" class="form-control"  name="name" value="{{$show->name}}" disabled>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="num_document">Numero Documento</label>
-                        <input type="text" class="form-control" id="num_document" name="num_document" value="{{$show->document}}" disabled>
+                        <input type="text" class="form-control"  name="num_document" value="{{$show->document}}" disabled>
                     </div>
                     <div class="form-group col-md-3">
                         <label for="email">Correo</label>
-                        <input type="email" class="form-control" id="email" name="email" value="{{$show->email}}" disabled>
+                        <input type="email" class="form-control"  name="email" value="{{$show->email}}" disabled>
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="address">Direccion</label>
-                        <input type="text" class="form-control" id="address" name="address" value="{{$show->address}}" disabled>
+                        <input type="text" class="form-control"  name="address" value="{{$show->address}}" disabled>
                     </div>
                     <div class="form-group col-md-4">
                         <label for="mobile">Celular</label>
-                        <input type="text" class="form-control" id="mobile" name="mobile" value="{{$show->mobile}}" disabled>
+                        <input type="text" class="form-control"  name="mobile" value="{{$show->mobile}}" disabled>
+                    </div>
+                     <div class="form-group col-md-2">
+                        <label for="status">Estado Orden</label>
+                        <input type="text" class="form-control"  name="mobile" value="{{$show->status}}" disabled>
                     </div>
                 </div>
                 <div class="border-bottom">
@@ -40,8 +44,13 @@
                 </div>
                 </div>
                 @if ($show->status !="PAYED")
-                    <a href="{{route('edit', $show->id)}}" class="btn btn-success mb-4 btn-lg">Editar</a>
-                    <a href="{{route('jsonorder',$show->id)}}"  class="btn btn-primary mb-4 btn-lg">Pagar</a>
+                    <div class="form-row">
+                        <div class="form-group col-md-12 text-center">
+                             <a href="{{route('edit', $show->id)}}"><button class="btn btn-success ">Editar</button> </a>
+                            <a href="{{route('jsonorder',$show->id)}}"><button class="btn btn-primary ">Pagar</button></a>
+                        </div>
+                    </div>
+
                 @endif
         </div>
     </div>

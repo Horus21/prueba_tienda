@@ -18,9 +18,7 @@ Route::get('/', 'OrdersController@index')->name('newOrder');
 
 Route::get('listOrder', 'OrdersController@list')->name('list');
 
-Route::get('resumeOrden/{id}', 'OrdersController@show')->name('show');
-
-Route::get('statusOrder', 'OrdersController@status')->name('status');
+Route::get('resumeOrder/{id}', 'OrdersController@show')->name('show');
 
 Route::post('/','OrdersController@create')->name('create');
 

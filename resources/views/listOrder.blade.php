@@ -3,8 +3,9 @@
 @section('content')
 
   <div class="container">
-           <h2>Lista de Ordenes Registradas </h2>
-           <small>En esta seccion se listan todas las ordenes registradas.</small>
+          <h2>Lista de Ordenes Registradas </h2>
+          <small>En esta seccion se listan todas las ordenes registradas.</small>
+
            @if(session('message'))
              <div class="alert alert-success">
                {{session('message')}}
