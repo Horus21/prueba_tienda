@@ -23,7 +23,7 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="name">Nombre</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Example Daniel Plazas" value="{{old('name')}}">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Daniel Plazas" value="{{old('name')}}">
                     </div>
                     <div class="form-group col-md-3">
                         <label for="document">Numero Documento</label>
@@ -37,11 +37,11 @@
                 <div class="form-row">
                     <div class="form-group col-md-6">
                         <label for="address">Direccion</label>
-                        <input type="text" class="form-control" id="address" name="address" placeholder="example Calle Wallaby, 42, Sidney" value="{{old('address')}}">
+                        <input type="text" class="form-control" id="address" name="address" placeholder=" Calle Wallaby, 42, Sidney" value="{{old('address')}}">
                     </div>
                     <div class="form-group col-md-4">
                         <label for="mobile">Celular</label>
-                        <input type="text" class="form-control" id="mobile" name="mobile" placeholder="example 3001234567" value="{{old('mobile')}}">
+                        <input type="text" class="form-control" id="mobile" name="mobile" placeholder=" 3001234567" value="{{old('mobile')}}">
                     </div>
                 </div>
                 <button type="submit"id="button" class="btn btn-primary float-right">Ordenar</button>

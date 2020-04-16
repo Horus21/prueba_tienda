@@ -20,6 +20,8 @@ Route::get('listOrder', 'OrdersController@list')->name('list');
 
 Route::get('resumeOrder/{id}', 'OrdersController@show')->name('show');
 
+Route::get('answer', 'OrdersController@answer')->name('answer');
+
 Route::post('/','OrdersController@create')->name('create');
 
 Route::get('edit/{id}', 'OrdersController@edit')->name('edit');

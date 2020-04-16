@@ -2,7 +2,7 @@
 @section('content')
     <h2>Resumen de la Orden </h2>
     <small>En esta seccion se muestra el detalle de la orden registrada.</small>
-
+    <br>
     <div class="card mx-auto shadow" style="width:90%;">
         <div class="card-header">
         <p class="text-center mb-0">Resumen de la orden </p>
@@ -39,17 +39,20 @@
                         <input type="text" class="form-control"  name="mobile" value="{{$show->status}}" disabled>
                     </div>
                 </div>
+
+                </div>
+                @if ($show->status !="PAYED")
                 <div class="border-bottom">
                     <h5 class="text-center">Opciones</h5>
                 </div>
-                </div>
-                @if ($show->status !="PAYED")
                     <div class="form-row">
                         <div class="form-group col-md-12 text-center">
+                            <br>
                              <a href="{{route('edit', $show->id)}}"><button class="btn btn-success ">Editar</button> </a>
                             <a href="{{route('jsonorder',$show->id)}}"><button class="btn btn-primary ">Pagar</button></a>
                         </div>
                     </div>
+
 
                 @endif
         </div>
